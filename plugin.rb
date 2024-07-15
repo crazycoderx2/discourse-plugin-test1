@@ -19,3 +19,5 @@ require_relative "lib/my_plugin_module/engine"
 after_initialize do
   # Code which should run after Rails has finished booting
 end
+
+register_asset "javascripts/discourse/templates/connectors/topic-title/test1-topic-title.hbs"
