@@ -2,12 +2,15 @@ export default {
   name: 'alert',
   initialize() {
     document.getElementById("test1_host").attachShadow({ mode: "open" }).innerHTML = `
+    <p>========= A =========</p>
     <div id="slotAAA">
       <slot name="slotAAA"></slot>
     </div>
+    <p>========= B =========</p>
     <div id="slotBBB">
       <slot name="slotBBB"></slot>
-    </div>`;
+    </div>
+    <p>========= Z =========</p>`;
     
     window.onmessage = function(e) {
       if (e.data === 'IFramePopup') {
