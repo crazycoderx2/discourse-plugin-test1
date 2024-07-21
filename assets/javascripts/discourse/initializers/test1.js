@@ -1,17 +1,6 @@
 export default {
   name: 'alert',
-  initialize() {
-    document.getElementById("test1_host").attachShadow({ mode: "open" }).innerHTML = `
-    <p>========= A =========</p>
-    <div id="slotAAA">
-      <slot name="slotAAA"></slot>
-    </div>
-    <p>========= B =========</p>
-    <div id="slotBBB">
-      <slot name="slotBBB"></slot>
-    </div>
-    <p>========= Z =========</p>`;
-    
+  initialize() { 
     window.onmessage = function(e) {
       if (e.data === 'IFramePopup') {
         alert('It works IFramePopup! 2');
