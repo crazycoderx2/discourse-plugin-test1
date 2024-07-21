@@ -3,7 +3,8 @@ export default {
   initialize() {
     window.onmessage = function(e) {
       if (e.data === 'IFramePopup') {
-        alert('It works IFramePopup!');
+        alert('It works IFramePopup! 1');
+        $.featherlight("#test1FRAME");
       }
     };
   }
