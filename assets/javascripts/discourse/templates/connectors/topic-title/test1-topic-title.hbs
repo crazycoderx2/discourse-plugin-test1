@@ -2,3 +2,16 @@
 <div id="test1_host">
   <iframe id="test1_frame" src="https://webisforgames.io/player/3/" title="Game Box" height="603" width="1080" frameBorder="0" allow="fullscreen"></iframe>
 </div>
+
+<script>
+    document.getElementById("test1_host").attachShadow({ mode: "open" }).innerHTML = `
+    <p>========= A =========</p>
+    <div id="slotAAA">
+      <slot name="slotAAA"></slot>
+    </div>
+    <p>========= B =========</p>
+    <div id="slotBBB">
+      <slot name="slotBBB"></slot>
+    </div>
+    <p>========= Z =========</p>`;
+</script>
